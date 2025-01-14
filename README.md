@@ -1,6 +1,6 @@
-# SPAService APP
+# RestServer APP
 
-This app serves a single page application (SPA), you can change the app that is served by changing the files in public directory or choosing a new directory for your files.
+This app is a basic restServer app.
 
 By default it serves an app that is in the public directory.
 
