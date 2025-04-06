@@ -9,7 +9,8 @@ export class TodoRoutes {
 
     // sendingt the reference to the function
     router.get("/", todoController.getTodos);
-    router.get("/:id", todoController.getTodos);
+    router.get("/:id", todoController.getTodoById);
+    router.post("/", todoController.createTodo);
 
     return router;
   }

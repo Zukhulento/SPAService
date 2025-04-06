@@ -26,7 +26,8 @@ export class Server {
 
   async start() {
     //* Middlewares
-
+    this.app.use(express.json()); // To parse JSON bodies
+    this.app.use(express.urlencoded({ extended: true })); // To parse URL-encoded bodies x-www-form-urlencoded
     //* Public folders
     // If the request is to root the server returns this
     this.app.use(express.static(this.publicPath));
