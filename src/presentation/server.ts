@@ -1,4 +1,5 @@
 import express, { Router } from "express";
+import compression from "compression";
 import path from "path";
 
 // Defining props
@@ -28,6 +29,7 @@ export class Server {
     //* Middlewares
     this.app.use(express.json()); // To parse JSON bodies
     this.app.use(express.urlencoded({ extended: true })); // To parse URL-encoded bodies x-www-form-urlencoded
+    this.app.use(compression()); // To compress the response
     // Accept formData
     
     //* Public folders
